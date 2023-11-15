@@ -1,0 +1,71 @@
+---> what is instance variable in python explain in breef with example.
+
+	In Python, an instance variable is a variable that is associated with a specific instance or object of a class. 
+	These variables hold data or state that is unique to each instance of the class. 
+	Instance variables are defined within the methods of a class and are prefixed with the self keyword, 
+    which refers to the instance itself. 
+	They are used to store and manage the attributes or properties of an object.
+
+	Here's a brief explanation with an example:
+	                class Dog:
+    				def __init__(self, name, age):
+        			# These are instance variables
+        				self.name = name
+        				self.age = age
+
+    				def bark(self):
+        				print(f"{self.name} says Woof!")
+
+				# Creating two Dog instances with different attributes
+				dog1 = Dog("Buddy", 3)
+				dog2 = Dog("Max", 5)
+
+				# Accessing and modifying instance variables
+				print(f"{dog1.name} is {dog1.age} years old.")
+				print(f"{dog2.name} is {dog2.age} years old.")
+
+				dog1.age = 4  # Modifying the age of dog1
+
+				# Calling a method that uses instance variables
+				dog1.bark()
+
+--------------------------------------------------------------------------------------------------------------------------------
+what is instance method in python , explain in brief with example
+
+    In Python, an instance method is a method defined within a class that operates on an instance of that class. These methods take the instance itself as their first parameter, conventionally named self, and they can access and manipulate the instance's attributes and data. Instance methods are the most common type of methods used in Python classes.
+
+    Here's a brief explanation of instance methods with an example:
+
+
+            class Person:
+                def __init__(self, name, age):
+                    self.name = name
+                    self.age = age
+
+                def introduce(self):
+                    return f"My name is {self.name} and I am {self.age} years old."
+
+                def have_birthday(self):
+                    self.age += 1
+
+            # Creating instances of the Person class
+            person1 = Person("Alice", 25)
+            person2 = Person("Bob", 30)
+
+            # Calling instance methods on the instances
+            print(person1.introduce())  # Calls the introduce method for person1
+            print(person2.introduce())  # Calls the introduce method for person2
+
+            person1.have_birthday()  # Calls the have_birthday method to increment age for person1
+            print(person1.introduce())  # Displays the updated age for person1
+            
+            In this example, introduce and have_birthday are instance methods of the Person class. 
+            They operate on individual Person instances (e.g., person1 and person2). 
+            The introduce method provides information about the person's name and age, 
+            and the have_birthday method increments the age of the person.
+            Instance methods are used to encapsulate behavior and operations specific to individual instances of a class. 
+            They can access and modify the instance's attributes, making them a fundamental building 
+            block of object-oriented programming in Python.
+
+
+------------------------------------------------------------------------------------------------------------------
